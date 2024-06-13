@@ -103,10 +103,11 @@ body {
 }
 
 input{
-  width: Hug (116.55px)px;height: Hug (51.15px)px;
+  width: 100px;
+  height:50px;
   padding: 12px 32px 14px 32px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 1;
   background-color:transparent;
   color: white;
   font-family: Work Sans;font-size: 20px;
@@ -120,6 +121,15 @@ input:hover{
   background-color: #005f5f;
   color: #ffffff;
 }
+
+/* input */
+/* input[type="button"]:hover,
+input[type="submit"]:hover,
+button:hover {
+  background-color: #005f5f;
+  cursor: pointer;
+} */
+
 
 .headerIntroContainer{
   grid-column: 1 / -1;
@@ -155,10 +165,9 @@ input:hover{
 }
 .statsBox p{
   font-family: Inter;
-  font-size: 86.75px;
+  font-size: 86px;
   font-weight: 700;
-  line-height: 108.63px;
-  letter-spacing: -2.475330114364624px;
+  line-height: 100px;
   text-align: left;
 
 }
@@ -168,98 +177,103 @@ input:hover{
   margin-top: -50px;
   margin-right: 20px;
 }
+/* main */
+.mainContainer1{
+  display: grid;
+  grid-template-columns: 1fr 35% 1fr;
+  height: 100vh;
+}
 
-.mainContainer{
-  display: flex;
-}
-.contentBlock,.contentBlockText, .contentBlock2{
-  background-color: #f3eeee;
-  text-align: center;
-  margin-top: 10%;
-  /* justify-content:space-evenly; */
-  background-color: transparent;
-}
-.contentBlockText{
+.mainContainer1 article {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
+  margin: 100px 0 100px 0;
+}
+
+.mainContainer1 h2 {
+  font-family: inter, Arial, Helvetica, sans-serif;
+  font-size: 5rem;
 }
 
 
-.mainContainer .contentBlock img{
-  max-width: 80%;
-  height: auto;
-  margin-top: 50%;
-}
-.mainContainer .contentBlock img:nth-of-type(1){
-  max-width: 60%;
-  height: auto;
-  margin-top: 80%;
+.mainText{
+  font-size: 1rem;
+  line-height: 2rem;
+  width: 90%;
 }
 
-.mainContainer .contentBlock img:nth-of-type(2){
-  max-width: 60%;
-  height: auto;
-  margin-top: 10%;
+.mainContainer1 div:nth-child(1) {
+  padding: 40vh 0 0 2%;
+}
+
+.mainContainer1 div:nth-of-type(1) img {
+  height: 25%;
+}
+
+
+#imgs_right{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#imgs_right img:nth-of-type(1) {
+  width: 70%;
+  margin-top:20%;
+}
+
+#imgs_right img:nth-of-type(2) {
+  width: 60%;
+  padding-bottom: 100px;
+
+  align-self: flex-end;
+}
+
+.mainContainer2{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 34% 1fr;
+}
+
+.mainContainer2 p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 300px;
+  margin-bottom: 150px;
+}
+
+#leftPart{
+  display: flex;
+  flex-direction: column;
+}
+
+#leftPart img:nth-of-type(1) {
+  width: 60%;
   margin-left: 50%;
 }
 
-.mainContainer .contentBlock img:nth-of-type(3){
-  max-width: 60%;
-  height: auto;
-  margin-top: 50%;
-  margin-left: 10%;
-  margin-left: 0;
+#leftPart img:nth-of-type(2) {
+  width: 50%;
+  margin-top: 15%;
 }
 
-.mainContainer .contentBlock2 img:nth-of-type(1){
-  max-width: 60%;
-  height: auto;
-  margin-top: -5%;
+#rightpart2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.mainContainer .contentBlock2 img:nth-of-type(2){
-  max-width: 50%;
-  height: auto;
-  margin-top: 10%;
-}
-
-.mainContainer .contentBlock2 img:nth-of-type(3){
-  max-width: 50%;
-  height: auto;
-  margin-top: 30%;
-  position: relative;
-  z-index: 1;
-}
-.mainContainer .contentBlock2 img:nth-of-type(4){
-  max-width: 60%;
-  margin-top: 30%;
+#rightpart2 img:nth-of-type(1) {
+  max-width:60%;
   margin-left: -10%;
-  height: auto;
-}
-
-.contentBlockTextDiv1{
-  min-width: 400px;
   margin-top: 20%;
 }
 
-.contentBlockTextDiv2{
-  min-width: 400px;
-}
-.contentBlockTextDiv1 p span{
-  font-family: Inter;
-  font-size: 83.58px;
-  font-weight: 700;
-  line-height: 82.29px;
-  text-align: left;
-  display: block;
-}
-
-.contentBlockTextDiv2 p, .contentBlockTextDiv1 p{
-  font-family: Work Sans;font-size: 15.8px;
-  font-weight: 400;
-  line-height: 29.63px;
-  text-align: left;
+#rightpart2 img:nth-of-type(2) {
+  width: 70%;
+  margin: 0 0 -10% -30%;
 }
 
 /* Bootem */
@@ -279,7 +293,7 @@ input:hover{
 }
 .part1 p span{
   font-family: Work Sans;
-  font-size: 19.75px;
+  font-size: 19px;
   font-weight: 400;
   line-height: 28px;
   text-align: left;
@@ -290,17 +304,16 @@ input:hover{
   font-family: Inter;
   font-size: 84px;
   font-weight: 700;
-  line-height: 82.29px;
+  line-height: 82px;
   text-align: left;
   max-width: 20%;
 }
 .part2{
   max-width: 40%;
   font-family: Inter;
-  font-size: 28.97px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 32.92px;
-  letter-spacing: -0.4081670045852661px;
+  line-height: 32px;
   text-align: left;
   
 }
@@ -317,9 +330,39 @@ input:hover{
 }
 
 .BetweenBox{
-  height: 20vh;
+  height: 30vh;
   width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: -1;
 }
+.BetweenBox img {
+  position: absolute;
+  top: -50%;
+  right: -5%;
+  max-width: 25%;
+  transform: translate(-50%, -50%); 
+  transform-origin: center; 
+  /* transform-origin von Bild */
+  /* transform-origin: top left;  */
+  
+  animation: rotationPfeil 5s linear infinite; 
+  
+}
+
+
+@keyframes rotationPfeil {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
 .bottomContainerPart2{
   grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
   gap: 5%;
@@ -334,7 +377,62 @@ input:hover{
   background-color: black;
   text-align: center;
   color: white;
+
+  position: relative;
+  /* z-index: -1; */
+  overflow: hidden;
 }
+
+.animationBox{
+  width: 80%;
+  height: 20%;
+  background-color: white;
+  position: absolute;
+  z-index: 2;
+  top: 30%;
+  right: 0%;
+ /* rotation according to x */
+  transform: rotate(45deg);
+
+  display: flex;
+  align-items: center;  /* Center align items vertically */
+  justify-content: center; /* Center align items horizontally */
+  overflow: hidden;
+}
+
+.animation{
+  animation: transforText 5s ease-in-out infinite alternate;
+  display: flex;
+}
+
+
+@keyframes transforText {
+  0%,100% {
+    transform: translateX(1%);
+  }
+  25% {
+    transform: translate(25%);
+  }
+
+  50% {
+    transform: translate(50%);
+  }
+  100% {
+    transform: translate(100%);
+  }
+}
+.animationBox p{
+  color: black;
+  font-size: 6rem;
+}
+
+.animationBox p span{
+  font-size: 6rem;
+  -webkit-text-stroke: 5px black; /* 5px broder black */
+  color: transparent; /* transparent */
+}
+
+
 .footerTextButtonBox{
   display: flex;
   flex-direction: column;
@@ -362,6 +460,9 @@ input:hover{
   max-width: 40%;
   border: 2px solid white;
 }
+
+
+
 .footerTextAndIconBox{
   display: flex;
   flex-direction: row;
